@@ -1,0 +1,69 @@
+body {
+	font-size: 18px;
+    font-family: sans-serif, serif;
+	color: indigo;
+	text-align: center; 
+	background-color: dimgrey;
+}
+html{
+    background-color: cornflowerblue;
+}
+/* phone or baseline views *********/
+main {
+	max-width: 755px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: auto;
+	font-size: 11px;
+}
+
+main section h2 {
+	color: magenta;
+}
+
+main section {
+	margin: 0.7rem;
+	border: 1px solid rgb(158, 45, 45);
+	padding: 0 1rem;
+	background-color: whitesmoke;
+}
+
+
+/* Tablet Views *********/
+@media only screen and (min-width: 37.5em) {
+	main {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	main section:nth-child(2) {
+		display: block;
+	}
+
+	main section:nth-child(3) {
+		grid-column: span 2;
+	}
+
+	main section picture img {
+		width: 100%;
+		height: auto;
+		border: 1px solid #bbb;
+	}
+}
+
+/* Desktop Views ****************************/
+@media only screen and (min-width: 60em) {
+	main {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	main section:nth-child(3) {
+		grid-column: span 1;
+	}
+}
+
+footer {
+    color: black;
+    padding: 0.5rem;
+	text-align: center;
+	
+  }
